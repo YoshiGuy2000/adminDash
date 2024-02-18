@@ -1,13 +1,19 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
 .whole_content {
-    height: 100vh;
+    height: 100%vh;
 }
 
 
+/*
 .header,
 .main-content,
 .sidebar {
     border: 1px solid red;
-}
+}*/
 
 .whole_content {
     display: grid;
@@ -23,7 +29,6 @@
     flex-direction: column;
     background-color: rgb(0, 119, 255);
     color: white;
-    justify-content: center;
 }
 
 .lists {
@@ -126,6 +131,7 @@ img.main {
     align-items: center;
     justify-content: flex-end;
     gap: 20px;
+    margin-right: 20px;
 }
 
 .btn {
@@ -138,3 +144,75 @@ img.main {
 
 /*Main content style*/
 
+.main-content {
+    display: grid;
+    background-color: rgb(174, 173, 173);
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding-top: 20px;
+}
+
+.main-content > * {
+    border: 1px solid blue;
+}
+
+.projectPane {
+    grid-row: 1 / 3;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.projectList {
+    grid-row: 1 / 3;
+    display: grid;
+    gap: 40px 20px;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns:  1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    overflow: scroll;
+}
+
+.projectCard {
+    background-color: white;
+    padding: 20px;
+    border-left: 10px solid lightgreen;
+
+}
+
+.announceList {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 10px;
+}
+
+.announceCard {
+    background-color: white;
+    padding: 10px;
+    font-size: small;
+    border-bottom: 10px solid lightslategray;
+}
+
+/*Trending section*/
+
+.trending_icon {
+    width: 2rem;
+    height: 2rem;
+}
+
+.trendingList {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    background-color: white;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.trendingCard {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
